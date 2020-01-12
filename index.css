@@ -1,49 +1,107 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width'>
-    <title>Star Wars Quiz Quiz</title>
-    <meta name='description' content='quiz about star wars.'>
-    <link href='index.css' rel='stylesheet' type='text/css'/>
-    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
-  </head>
-  
-<body>
-  <main role='main'>
-    <section id='start-page' class='box'>
-      <div id='title'>
-      <h1>Do you know your Star wars facts?</h1>
-      <img class='battle' src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/lightsaber-fight.png" alt='Luke and Vader Battle'> 
-      <h3 class='start-text'>Test your Star Wars facts<br>The button you hit to begin</h3>
-      </div>
-      <button class='button'>Start Quiz</button>
-    </section>
-    
-    <section id='question-page' class='hidden box'>
-      <form  id='form' method='get'>
-      <fieldset name='question-set'>
-        <div id='quiz-question' class='star-question'></div>
-        <div class='answers' role='radiogroup'></div>
-        <button id='submit-answer' class='button hidden disabled' type='submit' disabled>Right are you?</button>
-      </fieldset>
-      </form>
-      <button id='next-question' class='button hidden' type='submit'>Next</button>
-      <div id='feedbackcorrect' class='all-feedback hidden'>
-      <h3>Correct you are</h3>
-      <div class='results-counter'></div>
-      </section>
-    
-    <section id='final-page' class='hidden box'>
-      <h1>How well, you did?</h1>
-      <div id='final-correct'></div>
-      <div>
-      <p class='return'>Another chance you may have.</p></div>
-      <button id='retake' type='submit'>Again you should try</button>
-    </section>
-    
-  </main>  
-    <script src='//code.jquery.com/jquery.min.js'></script>
-    <script src='index.js'></script>
-  </body>
-</html>
+body * {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: serif;
+  color:  #2719C7;
+  background: url(https://cdn.wallpapersafari.com/90/29/4LbDOE.jpg) no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.box {
+  width: 90%;
+  height: 75%;
+  background-color: #FFE81F;
+  padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.battle {
+  height: auto;
+  width: 50%;
+}
+
+legend {
+  font-size: 22px;
+}
+
+fieldset {
+  border: none;
+}
+
+.button {
+  height: 35px;
+  width: 120px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+  font-family: 'Bitter', serif;
+}
+
+.star-question {
+  padding-left: 50px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.answers {
+  text-align: left;
+  padding-left: 50px;
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+
+.button.disabled {
+  opacity: 0.50; 
+  cursor: not-allowed;
+}
+
+.results-counter {
+  font-size: 20px;
+  text-align: center;
+}
+
+.all-feedback {
+  font-size: 18px;
+  margin-top: 10px;
+  position: relative;
+  line-height: 150%;
+}
+
+#final-correct {
+  margin-top: -30px;
+}
+
+.many-cups {
+  height: auto;
+  width: 40%;
+}
+
+.force {
+  font-size: 18px;
+}
+
+#retake {
+  height: 35px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+  font-family: serif;
+} 
