@@ -1,50 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Star Wars Quiz</title>
-  <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="index.css">
-
-</head>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width'>
+    <title>Star Wars Quiz Quiz</title>
+    <meta name='description' content='quiz about star wars.'>
+    <link href='index.css' rel='stylesheet' type='text/css'/>
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+  </head>
+  
 <body>
-
-<!-- Start Page -->
-    <h1>Star Wars Character Quiz</h1>
-
-    <div class = "start-quiz">
-      <p class = 'description'>Test your knowledge of what we associate Star Wars characters with!</p>
-      <button class='start-button'>Start Quiz</button>
-    </div>
-    
-    
-    
-<!-- Questions -->
-  
-    <div class = 'questions'>
-      <h2 class='question'></h2>
-      <p class= "score"> Score  </p>
-      <ul class ="list">
-      </ul>
-      
-      <div class='submit'>
-        <button class="submit-button">Check Answer</button> 
+  <main role='main'>
+    <section id='start-page' class='box'>
+      <div id='title'>
+      <h1>Do you know your Star wars facts?</h1>
+      <h3 class='start-text'>Test your Star Wars facts<br>The button you hit to begin</h3>
       </div>
-      <div class='next'>
-        <button class="next-button">Next</button> 
-      </div>
-      
-      <p class = 'question-number'></p>
-    </div>
-
-  <!-- Complete Page -->
-  
-    <div class = 'end-quiz'> 
-      <p class = 'end-score'></p>
-      <p class='comment'></p>
-      <button class="retake-button">Retake Quiz!</button>
-    </div>
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="index.js"></script>
-</body>
+      <button class='button'>Start Quiz</button>
+    </section>
+    
+    <section id='question-page' class='hidden box'>
+      <form  id='form' method='get'>
+      <fieldset name='question-set'>
+        <div id='quiz-question' class='star-question'></div>
+        <div class='answers' role='radiogroup'></div>
+        <button id='submit-answer' class='button hidden disabled' type='submit' disabled>Right are you?</button>
+      </fieldset>
+      </form>
+      <button id='next-question' class='button hidden' type='submit'>Next</button>
+      <div id='feedbackcorrect' class='all-feedback hidden'>
+      <h3>Correct you are</h3>
+      <div class='results-counter'></div>
+      </section>
+    
+    <section id='final-page' class='hidden box'>
+      <h1>How well, you did?</h1>
+      <div id='final-correct'></div>
+      <div>
+      <p class='return'>Another chance you may have.</p></div>
+      <button id='retake' type='submit'>Again you should try</button>
+    </section>
+    
+  </main>  
+    <script src='//code.jquery.com/jquery.min.js'></script>
+    <script src='index.js'></script>
+  </body>
 </html>
