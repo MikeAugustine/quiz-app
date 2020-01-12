@@ -1,98 +1,49 @@
-body {
-    box-sizing: border-box;
-    background: black;
-    background-repeat: no-repeat;
-    background-size: cover
-    color:#fcf700;
-    font-size: 20px;
-    margin: 0;
-  }
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width'>
+    <title>Star Wars Quiz Quiz</title>
+    <meta name='description' content='quiz about star wars.'>
+    <link href='index.css' rel='stylesheet' type='text/css'/>
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+  </head>
   
-  h1 {
-    margin: 60px 60px 0 60px;
-    font-size: 30px; 
-    padding-bottom: 30px;
-    border-bottom: 1px solid #dcdce9;
-    color: #fcf700;
-  }
-  
-  h1, h2 {
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-  }
-  
-  h2 {
-    font-size: 20px;
-  }
-  
-  button {
-    margin-top: 20px;
-    width: 300px;
-    height: 40px;
-    background: #252839;
-    font-family: 'Dosis', sans-serif;
-    font-size: 20px;
-    color: #fcf700;
-    border: .5px solid #fcf700;
-  }
-  
-  .start-quiz {
-    width: 500px;
-    height: 300px;
-    margin: 100px auto;
-    text-align: center;
-    padding-bottom: 200px;
-    color: #b5b5b7;
-  }
-  
-  .questions, .end-quiz {
-    display: none;
-    text-align: center;
-    padding-bottom: 200px;
-    margin: 100px auto 0 auto;
-  
-    width: 500px;
-    height: 300px;
-  }
-  
-  .end-quiz {
-    border: 2px solid #fcf700;
-    padding-top: 80px;
-    height: 100px;
-    font-size: 30px;
-    color: #b5b5b7;
-  }
-  
-  .question-number, .score {
-    font-size: 30px;
-    color: #b5b5b7;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    border: 1px solid #d6d6cf;
-    width: 200px;
-    margin: 10px auto;
-    font-size: 18px;
-    border-radius: 5px;
-    padding: 5px;
-  }
+<body>
+  <main role='main'>
+    <section id='start-page' class='box'>
+      <div id='title'>
+      <h1>Do you know your Star wars facts?</h1>
+      <img class='battle' src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/lightsaber-fight.png" alt='Luke and Vader Battle'> 
+      <h3 class='start-text'>Test your Star Wars facts<br>The button you hit to begin</h3>
+      </div>
+      <button class='button'>Start Quiz</button>
+    </section>
     
-  .selected {
-    background: #f2b632;
-    color:#252839;
-  }
-  
-  .correct {
-    background-color: green;
-  }
-  
-  .incorrect {
-    background-color: red;
-  }
+    <section id='question-page' class='hidden box'>
+      <form  id='form' method='get'>
+      <fieldset name='question-set'>
+        <div id='quiz-question' class='star-question'></div>
+        <div class='answers' role='radiogroup'></div>
+        <button id='submit-answer' class='button hidden disabled' type='submit' disabled>Right are you?</button>
+      </fieldset>
+      </form>
+      <button id='next-question' class='button hidden' type='submit'>Next</button>
+      <div id='feedbackcorrect' class='all-feedback hidden'>
+      <h3>Correct you are</h3>
+      <div class='results-counter'></div>
+      </section>
+    
+    <section id='final-page' class='hidden box'>
+      <h1>How well, you did?</h1>
+      <div id='final-correct'></div>
+      <div>
+      <p class='return'>Another chance you may have.</p></div>
+      <button id='retake' type='submit'>Again you should try</button>
+    </section>
+    
+  </main>  
+    <script src='//code.jquery.com/jquery.min.js'></script>
+    <script src='index.js'></script>
+  </body>
+</html>
